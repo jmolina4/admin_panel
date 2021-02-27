@@ -15,13 +15,13 @@
 ### <a id="Step1"></a>1. Run our Client ###
 ```shell
 cd client
-docker build -t shopping_api .
+docker build -t shopping_client .
 docker run -it -p 8080:8080 --rm --name shopping_app shopping_client
 ```
 ### <a id="Step2"></a>2. Create our API ###
 ```shell
-composer create-project --prefer-dist laravel/lumen shopping_api
-cd shopping_api
+composer create-project --prefer-dist laravel/lumen api
+cd api
 docker build -t shopping_api .
 docker run -it -p 8000:8000 --rm --name shopping_app shopping_api
 ```

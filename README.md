@@ -11,16 +11,15 @@
 
 
 
-### <a id="Step1"></a>Step 1 ###
+### <a id="Step1"></a>1. Run our Client ###
 ```
 cd client
 docker build -t shopping_api
 docker run -it -p 8080:8080 --rm --name shopping_app shopping_client
 ```
-### <a id="Step2"></a>Step 2 ###
-### <a id="Step3"></a>Step 3 ###
-### <a id="Step4"></a>Step 4 ###
-### <a id="Step5"></a>Step 5 ###
-
-### <a id="Extra"></a>Extra ###
+### <a id="Step2"></a>2. Create our API ###
+### <a id="Step3"></a>3. Create one endpoint ###
+### <a id="Step4"></a>4. Connect endpoint with our Client ###
+### <a id="Step5"></a>5. Authenticate endpoint ###
+### <a id="Extra"></a>6. Extra ###
 - How to create a vue app in 5 min: https://www.blog.duomly.com/vue-js-tutorial-how-to-create-vue-js-app-in-5-minutes/#1-install-vue-cli

@@ -46,7 +46,7 @@ export default {
   },
   created: function() {
     axios
-        .get('https://jsonplaceholder.typicode.com/users')
+        .get('http://localhost:8000/users')
         .then(res => {
           this.users = res.data;
         })

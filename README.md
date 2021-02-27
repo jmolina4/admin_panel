@@ -36,3 +36,4 @@ docker-compose up --build
 ### <a id="Step6"></a>6. Authenticate endpoint ###
 ### <a id="Extra"></a>7. Extra ###
 - How to create a vue app in 5 min: https://www.blog.duomly.com/vue-js-tutorial-how-to-create-vue-js-app-in-5-minutes/#1-install-vue-cli
+- Lumen Framework: https://lumen.laravel.com/

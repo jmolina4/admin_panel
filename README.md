@@ -12,12 +12,18 @@
 
 
 ### <a id="Step1"></a>1. Run our Client ###
-```
+```shell
 cd client
 docker build -t shopping_api
 docker run -it -p 8080:8080 --rm --name shopping_app shopping_client
 ```
 ### <a id="Step2"></a>2. Create our API ###
+```shell
+composer create-project --prefer-dist laravel/lumen shopping_api
+cd shopping_api
+docker build -t shopping_api .
+docker run -it -p 8000:8000 --rm --name shopping_app shopping_api
+```
 ### <a id="Step3"></a>3. Create one endpoint ###
 ### <a id="Step4"></a>4. Connect endpoint with our Client ###
 ### <a id="Step5"></a>5. Authenticate endpoint ###

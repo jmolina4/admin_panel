@@ -27,10 +27,11 @@ docker run -it -p 8000:8000 --rm --name shopping_app shopping_api
 ```
 ### <a id="Step3"></a>3. Run Client and API together ###
 ```shell
-docker-compose build
-docker-compose up
+docker-compose up --build
 ```
 ### <a id="Step4"></a>4. Create one endpoint ###
+- Create new Route
+- Create UsersController with index
 ### <a id="Step5"></a>5. Connect endpoint with our Client ###
 ### <a id="Step6"></a>6. Authenticate endpoint ###
 ### <a id="Extra"></a>7. Extra ###

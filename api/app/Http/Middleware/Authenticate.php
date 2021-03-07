@@ -35,10 +35,10 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if ($this->auth->guard($guard)->guest()) {
-            return response('Unauthorized.', 401);
+        if($request->getUser() != 'admin' || $request->getPassword() != '1234!') {
+            $headers = array('WWW-Authenticate' => 'Basic');
+            return response('Admin Login', 401, $headers);
         }
-
         return $next($request);
     }
 }

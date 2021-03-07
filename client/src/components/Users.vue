@@ -46,7 +46,12 @@ export default {
   },
   created: function() {
     axios
-        .get('http://localhost:8000/users')
+        .get('http://localhost:8000/users', {
+          auth: {
+            username: 'admin',
+            password: '1234!'
+          }
+        })
         .then(res => {
           this.users = res.data;
         })

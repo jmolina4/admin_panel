@@ -17,9 +17,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/users', 'UsersController@index');
 $router->get('/users/{id}', 'UsersController@show');
 
-$router->group(['middleware' => 'auth'], function($router) {
+$router->group(['middleware' => 'auth'], function ($router) {
     $router->post('/users', 'UsersController@create');
+    $router->get('/users', 'UsersController@index');
 });

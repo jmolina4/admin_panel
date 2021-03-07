@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Curl\User;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
@@ -21,6 +22,24 @@ class UsersController extends Controller
         $users = json_decode($this->data(),true);
 
         return $users;
+    }
+
+    public function create(Request $request)
+    {
+        $user = new User;
+        $user->name= $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->age = $request->age;
+
+        $user->save();
+        return response()->json($user, 201);
+    }
+
+    public function show($id)
+    {
+        $user = User::find($id);
+        return response()->json($user);
     }
 
     private function data()

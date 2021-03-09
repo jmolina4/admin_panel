@@ -15,15 +15,15 @@
 ### <a id="Step1"></a>1. Run our Client ###
 ```shell
 cd client
-docker build -t shopping_client .
-docker run -it -p 8080:8080 --rm --name shopping_app shopping_client
+docker build -t admin_panel_client .
+docker run -it -p 8080:8080 --rm --name admin_panel admin_panel_client
 ```
 ### <a id="Step2"></a>2. Create our API ###
 ```shell
 composer create-project --prefer-dist laravel/lumen api
 cd api
-docker build -t shopping_api .
-docker run -it -p 8000:8000 --rm --name shopping_app shopping_api
+docker build -t admin_panel_api .
+docker run -it -p 8000:8000 --rm --name admin_panel admin_panel_api
 ```
 ### <a id="Step3"></a>3. Run Client and API together ###
 ```shell
